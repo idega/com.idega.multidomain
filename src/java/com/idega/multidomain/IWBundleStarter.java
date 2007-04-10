@@ -1,5 +1,5 @@
 /*
- * $Id: IWBundleStarter.java,v 1.1 2007/04/09 22:11:06 tryggvil Exp $
+ * $Id: IWBundleStarter.java,v 1.2 2007/04/10 01:33:01 eiki Exp $
  * Created on 2.11.2004
  *
  * Copyright (C) 2004 Idega Software hf. All Rights Reserved.
@@ -21,10 +21,10 @@ import com.idega.manager.view.ManagerViewManager;
 
 /**
  * 
- *  Last modified: $Date: 2007/04/09 22:11:06 $ by $Author: tryggvil $
+ *  Last modified: $Date: 2007/04/10 01:33:01 $ by $Author: eiki $
  * 
  * @author <a href="mailto:tryggvil@idega.com">Tryggvi Larusson</a>
- * @version $Revision: 1.1 $
+ * @version $Revision: 1.2 $
  */
 public class IWBundleStarter implements IWBundleStartable {
 	private static final String BUNDLE_IDENTIFIER="com.idega.multidomain";
@@ -65,7 +65,7 @@ public class IWBundleStarter implements IWBundleStartable {
 		DefaultViewNode domainsNode = new DefaultViewNode("domains",managerNode);
 		domainsNode.setJspUri(bundle.getJSPURI("domainManager.jsp"));
 		domainsNode.setAuthorizedRoles(roles);
-		domainsNode.setName("#{localizedStrings['com.idega.multidomain']['domains']}");
+		domainsNode.setName("#{localizedStrings['"+BUNDLE_IDENTIFIER+"']['domains']}");
 		
 
 	}
